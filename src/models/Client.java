@@ -37,4 +37,15 @@ public class Client {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
+    public void toWithdraw(float balance, float money){
+        if(balance < 0 || balance < money){
+            System.out.println("Sorry, you don't have enough money ");
+        }else{
+            this.balance -= money;
+        }
+    }
+
+
+
 }
