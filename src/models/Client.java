@@ -38,14 +38,17 @@ public class Client {
         this.owner = owner;
     }
 
-    public void toWithdraw(float balance, float money){
-        if(balance < 0 || balance < money){
+    public void toWithdraw(float money){
+        if(this.balance < 0 || this.balance < money){
             System.out.println("Sorry, you don't have enough money ");
         }else{
             this.balance -= money;
         }
     }
 
+    public void toDeposit(float money){
+        this.balance += money;
+    }
 
 
 }
