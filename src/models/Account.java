@@ -5,6 +5,8 @@ public class Account {
     private int agency;
     private int number;
 
+    private Client owner;
+
     public Client getOwner() {
         return owner;
     }
@@ -13,14 +15,9 @@ public class Account {
         this.owner = owner;
     }
 
-    private Client owner;
 
     public float getBalance() {
         return balance;
-    }
-
-    public void setBalance(float balance) {
-        this.balance = balance;
     }
 
     public int getAgency() {
@@ -48,7 +45,9 @@ public class Account {
     }
 
     public void toDeposit(float money){
-        this.balance += money;
+        if(money > 0) {
+            this.balance += money;
+        }
     }
 
 
