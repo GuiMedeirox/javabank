@@ -2,9 +2,8 @@ package models;
 
 public class Account {
     private float balance;
-    private int agency;
-    private int number;
-
+    private double agency;
+    private double number;
     private Client owner;
 
     public Client getOwner() {
@@ -20,20 +19,13 @@ public class Account {
         return balance;
     }
 
-    public int getAgency() {
+    public double getAgency() {
         return agency;
     }
 
-    public void setAgency(int agency) {
-        this.agency = agency;
-    }
 
-    public int getNumber() {
+    public double getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     public void toWithdraw(float money){
@@ -50,5 +42,16 @@ public class Account {
         }
     }
 
+    public Account(Client owner){
+        this.agency = Math.floor(Math.random() *(999999));
+        this.number = Math.floor(Math.random() *(999999));
+        this.owner = owner;
+    }
+
+    public Account(){
+        this(null);
+    }
+
 
 }
+
