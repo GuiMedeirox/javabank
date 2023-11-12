@@ -45,7 +45,7 @@ public class Account {
     public Account(Client owner){
         this.agency = Math.floor(Math.random() *(999999));
         this.number = Math.floor(Math.random() *(999999));
-        this.owner = owner;
+        this.owner= owner;
     }
 
     public Account(){
