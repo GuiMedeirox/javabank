@@ -3,7 +3,7 @@ package models;
 public class Employee {
     private String name;
     private String cpf;
-
+    private double payment;
     public double getBonus(){
         return this.payment*0.1;
     }
@@ -31,7 +31,7 @@ public class Employee {
         this.payment = payment;
     }
 
-    private double payment;
+
 
 
 
