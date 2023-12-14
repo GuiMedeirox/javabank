@@ -1,8 +1,7 @@
 package models;
 
 public class HumanResources {
-    public double getTotalPayment(Employee e){
-        return e.getPayment() + e.getBonus();
+    public void getInformations(Employee e){
+        System.out.println("NAME " +e.getName() +"\nCPF " +e.getCpf());
     }
-
 }
