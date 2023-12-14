@@ -14,7 +14,6 @@ public class Account {
         this.owner = owner;
     }
 
-
     public float getBalance() {
         return balance;
     }
@@ -23,7 +22,12 @@ public class Account {
         return agency;
     }
 
-
+    public void toTransfer(float value, Account b){
+        if( this.balance >= value ){
+            b.toDeposit(value);
+            this.balance -= value;
+        }
+    }
     public double getNumber() {
         return number;
     }
@@ -46,11 +50,6 @@ public class Account {
         this.agency = Math.floor(Math.random() *(999999));
         this.number = Math.floor(Math.random() *(999999));
         this.owner= owner;
-    }
-
-    public Account(){
-        this(null);
-
     }
 
 
