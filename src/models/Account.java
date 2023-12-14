@@ -1,6 +1,6 @@
 package models;
 
-public class Account {
+public abstract class Account {
     private float balance;
     private double agency;
     private double number;
