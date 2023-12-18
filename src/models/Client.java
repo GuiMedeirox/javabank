@@ -1,9 +1,9 @@
 package models;
 
-public class Client {
+public abstract class Client {
     private String name;
     private String CPF; //brazillian ID
-    private String profession;
+    private int password;
     public String getName() {
         return name;
     }
@@ -18,14 +18,6 @@ public class Client {
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
-    }
-
-    public String getProfession() {
-        return profession;
-    }
-
-    public void setProfession(String profession) {
-        this.profession = profession;
     }
 
 }

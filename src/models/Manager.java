@@ -6,8 +6,8 @@ public class Manager extends Employee {
         if (pass == this.password) return true;
         else return false;
     }
-
+    @Override
     public double getBonus() {
-        return super.getPayment() + super.getBonus();
+        return super.getPayment()*5;
     }
 }

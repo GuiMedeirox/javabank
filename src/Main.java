@@ -2,12 +2,13 @@ import models.*;
 
 public class Main {
     public static void main(String[] args) {
-        Client c = new Client();
-        c.setName("Carl Johnson");
-        CurrentAccount a = new CurrentAccount(c);
-        a.toDeposit(100);
-        a.toWithdraw(20);
-        System.out.println(a.getBalance());
+        BusinessClient c1 = new BusinessClient();
+        PersonalClient c2 = new PersonalClient();
+
+        c1.setName("Carl");
+        c2.setName("John");
+        c1.setPassword(1234);
+        System.out.println(c1.toAuth(1234));
 
     }
 }

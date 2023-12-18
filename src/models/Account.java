@@ -31,7 +31,6 @@ public abstract class Account {
     public double getNumber() {
         return number;
     }
-
     public void toWithdraw(float money){
         if(this.balance < 0 || this.balance < money){
             System.out.println("Sorry, you don't have enough money ");

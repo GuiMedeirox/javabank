@@ -1,12 +1,10 @@
 package models;
 
-public class Employee {
+public abstract class Employee {
     private String name;
     private String cpf;
     private double payment;
-    public double getBonus(){
-        return this.payment*0.1;
-    }
+    public abstract double getBonus();
     public String getName() {
         return name;
     }
@@ -30,9 +28,5 @@ public class Employee {
     public void setPayment(double payment) {
         this.payment = payment;
     }
-
-
-
-
 
 }
